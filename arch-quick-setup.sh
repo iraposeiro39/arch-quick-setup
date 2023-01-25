@@ -34,8 +34,8 @@ read -p "Enter your Swap partition size (should be the same as your RAM, if not 
 echo " "
 read -p "Enter the packages you want to be installed (The default packages are base, linux, linux-firmware, linux-headers, dhcpcd, nano and sudo)
 : " PKGS
-echo "$USER / $PASS_USER / $PASS_ROOT / $HOSTNAME / $SWAP / $PKGS"
-read -p "Just a test: " TEST
+echo "User=$USER / User's pass=$PASS_USER / Root's pass=$PASS_ROOT / Hostname=$HOSTNAME / Swap size=$SWAP / Aditional Packages=$PKGS"
+read -p "Press any key to continue..."
 ## Set NTP server to true
 timedatectl set-ntp true
 ## PT Keyboard
