@@ -1,10 +1,10 @@
-# iraposeiro39/arch-quick-setup
+# Arch quick setup
+#### made by iraposeiro39
 
-made by iraposeiro39
 
 This is a script I did in my free time as a way to learn a more about making sh scripts, it was pretty fun to do :)
 
-### Setup
+## Setup
 
 To run the script you need to install git on the archiso
 
