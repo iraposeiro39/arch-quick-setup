@@ -1,5 +1,5 @@
 
-# Arch quick setup
+## Arch quick setup
 #### made by iraposeiro39
 
 
