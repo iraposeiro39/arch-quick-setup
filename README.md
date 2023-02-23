@@ -1,6 +1,6 @@
 
-## Arch quick setup
-#### made by iraposeiro39
+# Arch quick setup
+# Arch quick setup 
 
 
 This is a script I did in my free time as a way to learn a more about making sh scripts, it was pretty fun to do :)
