@@ -4,9 +4,9 @@
 ## This is just a simple script and should be not taken seriously
 ## Follow my projects on Github: https://github.com/iraposeiro39
 ##
-######### Start Script ######### 
+######### Initial Settings ######### 
 clear
-echo "Starting Setup"
+echo "Initializing Setup..."
 ## Connection test
 if ping -c 4 8.8.8.8 &>/dev/null
 then
@@ -19,24 +19,27 @@ fi
 sleep 1
 ######### Variables #########
 read -p "Enter the name for your user
-: " USER
+> " USER
 echo " "
-read -p "Enter the pass for your user
-: " PASS_USER
+read -sp "Enter the pass for your user
+> " PASS_USER
 echo " "
-read -p "Enter root's password
-: " PASS_ROOT
+read -sp "Enter root's password
+> " PASS_ROOT
 echo " "
 read -p "Enter the PCs hostname
-: " HOSTNAME
+> " HOSTNAME
 echo " "
 read -p "Enter your Swap partition size (should be the same as your RAM, if not bigger)
-: " SWAP
+> " SWAP
 echo " "
 read -p "Enter the packages you want to be installed, they have to be separated by a space (The default packages are base, linux, linux-firmware, linux-headers, dhcpcd, grub, nano and sudo)
-: " PKGS
-echo "User=$USER / User's pass=$PASS_USER / Root's pass=$PASS_ROOT / Hostname=$HOSTNAME / Swap size=$SWAP / Aditional Packages=$PKGS"
+> " PKGS
+echo "User=$USER /User's pass=$PASS_USER / Root's pass=$PASS_ROOT / Hostname=$HOSTNAME / Swap size=$SWAP / Aditional Packages=$PKGS"
 read -p "Press any key to continue..."
+clear
+######### Start Install #########
+echo "Starting Setup..."
 ## Set NTP server to true
 timedatectl set-ntp true
 ## PT Keyboard
