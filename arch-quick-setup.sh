@@ -132,6 +132,7 @@ arch-chroot /mnt ./temp.sh
 # It enters chroot, and when it exits...
 echo "All done, Cleaning up..."
 sleep 3
+rm temp.sh
 rm /mnt/temp.sh
 echo "Arch is now installed, you should be able to reboot.
 If you want, make any changes you deem necessary."
