@@ -26,8 +26,17 @@ Then execute it and thanks for using it :)
 ./arch-quick-setup.sh
 ```
 
-If you want to execute it all at once, just copy this:
+## Proxy
+
+If your network uses a proxy you need to export `http_proxy` and `https_proxy`
 
 ```
-pacman -Sy git && git clone https://github.com/iraposeiro39/arch-quick-setup.git && cd arch-quick-setup-main && chmod +x arch-quick-setup.sh && ./arch-quick-setup.sh
+export http_proxy='http://127.0.0.1:1234'
+export https_proxy='https://127.0.0.1:1234'
+```
+
+and you need to give git a proxy before using it
+
+```
+git config --global http.proxy http://127.0.0.1:1234
 ```
