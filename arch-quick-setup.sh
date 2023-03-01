@@ -30,7 +30,7 @@ read -p "Enter the PCs hostname
 > " HOSTNAME
 read -p "Enter your Swap partition size (should be the same as your RAM, if not bigger)
 > " SWAP
-read -p "Enter the packages you want to be installed, they have to be separated by a space (The default packages are base, linux, linux-firmware, linux-headers, dhcpcd, grub, nano and sudo)
+read -p "Enter the packages you want to be installed, they have to be separated by a space (The default packages are base, linux, linux-firmware, linux-headers, dhcpcd, grub, nano, sudo and polkit)
 > " PKGS
 echo " "
 echo "User=$USER
@@ -89,7 +89,7 @@ sleep 3
 echo "Installing the System"
 sleep 1
 pacman-key --init && pacman-key --populate
-pacstrap /mnt base linux linux-firmware linux-headers dhcpcd grub nano sudo $PKGS
+pacstrap /mnt base linux linux-firmware linux-headers dhcpcd grub nano sudo polkit $PKGS
 echo " "
 ## Generating the fstab file
 echo "Done! Sending the fstab file to /etc/fstab in the new system"
