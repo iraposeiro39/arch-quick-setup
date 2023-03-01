@@ -65,12 +65,12 @@ loadkeys pt-latin1
 echo "Setting the partition table (MBR)..."
 sleep 1
 echo "label: dos" | sfdisk /dev/sda
-## Making the Swap partition, formatting and mounting it
+## Making the Swap partition
 echo "Making the Swap partition..."
 sleep 1
 echo "size="$SWAP"G" | sfdisk /dev/sda -N 1
 echo "type= S" | sfdisk /dev/sda -N 1
-## Making the Standard partition, formatting and mounting it
+## Making the Standard partition
 echo "Making the Standard partition..."
 sleep 1
 echo "size=" "" | sfdisk /dev/sda -N 2
@@ -88,6 +88,7 @@ sleep 3
 ## Using pacstrap to send pkgs to the new system
 echo "Installing the System"
 sleep 1
+pacman-key --init && pacman-key --populate
 pacstrap /mnt base linux linux-firmware linux-headers dhcpcd grub nano sudo $PKGS
 echo " "
 ## Generating the fstab file
