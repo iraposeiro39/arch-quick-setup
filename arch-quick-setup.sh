@@ -89,7 +89,7 @@ sleep 3
 echo "Installing the System"
 sleep 1
 pacman-key --init && pacman-key --populate
-pacstrap /mnt base linux linux-firmware linux-headers dhcpcd grub nano sudo polkit $PKGS
+pacstrap -K /mnt base linux linux-firmware linux-headers dhcpcd grub nano sudo polkit $PKGS
 echo " "
 ## Generating the fstab file
 echo "Done! Sending the fstab file to /etc/fstab in the new system"
